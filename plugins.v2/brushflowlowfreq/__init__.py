@@ -245,7 +245,7 @@ class BrushFlowLowFreq(_PluginBase):
     # region 全局定义
 
     # 插件名称
-    plugin_name = "站点刷流（低频版）"
+    plugin_name = "站点刷流（vanplus）"
     # 插件描述
     plugin_desc = "自动托管刷流，将会提高对应站点的访问频率。（基于官方插件BrushFlow二次开发）"
     # 插件图标
@@ -253,7 +253,7 @@ class BrushFlowLowFreq(_PluginBase):
     # 插件版本
     plugin_version = "4.3.1"
     # 插件作者
-    plugin_author = "jxxghp,InfinityPacer"
+    plugin_author = "jxxghp,InfinityPacer,vanplus"
     # 作者主页
     author_url = "https://github.com/InfinityPacer"
     # 插件配置项ID前缀
@@ -276,9 +276,9 @@ class BrushFlowLowFreq(_PluginBase):
     # 订阅缓存信息
     _subscribe_infos = None
     # Brush定时
-    _brush_interval = 10
+    _brush_interval = 3
     # Check定时
-    _check_interval = 5
+    _check_interval = 1
     # 退出事件
     _event = threading.Event()
     _scheduler = None
