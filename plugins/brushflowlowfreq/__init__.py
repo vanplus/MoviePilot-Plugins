@@ -153,7 +153,7 @@ class BrushConfig:
     @staticmethod
     def get_demo_site_config() -> str:
         desc = (
-            "// 以下为配置示例，请参考：https://github.com/InfinityPacer/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md 进行配置\n"
+            "// 以下为配置示例，请参考：https://github.com/vanplus/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md 进行配置\n"
             "// 如与全局保持一致的配置项，请勿在站点配置中配置\n"
             "// 注意无关内容需使用 // 注释\n")
         config = """[{
@@ -252,7 +252,7 @@ class BrushFlowLowFreq(_PluginBase):
     # region 全局定义
 
     # 插件名称
-    plugin_name = "站点刷流（低频版）"
+    plugin_name = "站点刷流（vanplus）"
     # 插件描述
     plugin_desc = "自动托管刷流，将会提高对应站点的访问频率。（基于官方插件BrushFlow二次开发）"
     # 插件图标
@@ -260,9 +260,9 @@ class BrushFlowLowFreq(_PluginBase):
     # 插件版本
     plugin_version = "3.8"
     # 插件作者
-    plugin_author = "jxxghp,InfinityPacer"
+    plugin_author = "jxxghp,vanplus"
     # 作者主页
-    author_url = "https://github.com/InfinityPacer"
+    author_url = "https://github.com/vanplus"
     # 插件配置项ID前缀
     plugin_config_prefix = "brushflowlowfreq_"
     # 加载顺序
@@ -438,7 +438,7 @@ class BrushFlowLowFreq(_PluginBase):
             logger.info(f"站点刷流Brush定时服务启动，时间间隔 {self._brush_interval} 分钟")
             services.append({
                 "id": "BrushFlowLowFreq",
-                "name": "站点刷流（低频版）Brush服务",
+                "name": "站点刷流（vanplus）Brush服务",
                 "trigger": "interval",
                 "func": self.brush,
                 "kwargs": {"minutes": self._brush_interval}
@@ -448,7 +448,7 @@ class BrushFlowLowFreq(_PluginBase):
             logger.info(f"站点刷流Check定时服务启动，时间间隔 {self._check_interval} 分钟")
             services.append({
                 "id": "BrushFlowLowFreqCheck",
-                "name": "站点刷流（低频版）Check服务",
+                "name": "站点刷流（vanplus）Check服务",
                 "trigger": "interval",
                 "func": self.check,
                 "kwargs": {"minutes": self._check_interval}
@@ -1732,7 +1732,7 @@ class BrushFlowLowFreq(_PluginBase):
                                             {
                                                 'component': 'a',
                                                 'props': {
-                                                    'href': 'https://github.com/InfinityPacer/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md',
+                                                    'href': 'https://github.com/vanplus/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md',
                                                     'target': '_blank'
                                                 },
                                                 'content': [
@@ -1860,7 +1860,7 @@ class BrushFlowLowFreq(_PluginBase):
                                                                     {
                                                                         'component': 'a',
                                                                         'props': {
-                                                                            'href': 'https://github.com/InfinityPacer/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md',
+                                                                            'href': 'https://github.com/vanplus/MoviePilot-Plugins/blob/main/plugins/brushflowlowfreq/README.md',
                                                                             'target': '_blank'
                                                                         },
                                                                         'content': [
@@ -3685,7 +3685,7 @@ class BrushFlowLowFreq(_PluginBase):
         记录错误日志并发送系统通知
         """
         logger.error(message)
-        self.systemmessage.put(message, title="站点刷流（低频版）")
+        self.systemmessage.put(message, title="站点刷流（vanplus）")
 
     def __send_delete_message(self, site_name: str, torrent_title: str, torrent_desc: str, reason: str,
                               title: str = "【刷流任务种子删除】"):
