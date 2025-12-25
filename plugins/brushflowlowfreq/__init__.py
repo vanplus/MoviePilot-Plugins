@@ -4238,6 +4238,8 @@ class BrushFlowLowFreq(_PluginBase):
         """
         判断是否存在插件冲突
         """
+        return True
+        
         brush_config = self.__get_brush_config()
         if not brush_config:
             return True
